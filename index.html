@@ -8,6 +8,7 @@
 </head>
   <body>
       <div id="app">
+
         <h2>TODO List</h2>
         <form v-on:submit.prevent>
           <input type="text" v-model="newItem">
@@ -15,6 +16,7 @@
             Add
           </button>
         </form>
+
         <ul>
           <li v-for="(todo, index) in todos">
             <input type="checkbox" v-model="todo.isDone">
@@ -22,6 +24,7 @@
             <button v-on:click="deleteItem(index)">Delete</button>
           </li>
         </ul>
+        
         <!-- <pre>{{ $data }}</pre> -->
       </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16"></script>
